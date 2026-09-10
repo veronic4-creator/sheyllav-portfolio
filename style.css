@@ -1,0 +1,101 @@
+
+* {
+  margin:0;
+  padding:0
+}
+
+/* CSS vem aqui em baixo*/
+
+header {
+
+    color: rgb(230, 230, 59);
+    color:black;
+    text-align: center;
+    padding: 20px;
+    position:static; 
+    width: 250px;
+    font-style: italic;
+    background-image: url("pictures/foto5.jpg");
+}
+
+main {
+flex: 1;
+padding: 30px;
+text-align:justify
+
+}
+
+body {
+    background-image:url("pictures/foto3.jpg");
+    background-position: center;  /* centraliza */
+    background-repeat: no-repeat; /* evita repetição */
+    background-attachment: fixed; /* efeito fixo ao rolar */
+    min-height: 200vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+    color: rgb(12, 12, 3); background-color: rgb(20, 20, 20);
+
+}
+
+
+body a {
+    display: flex;
+   text-transform: uppercase;
+   text-decoration: none;
+   color:rgb(12, 10, 1)
+
+}
+
+
+#sobre {
+    padding-top: 60px;
+    margin-top: 60px;
+    ul {
+    list-style: none;
+}
+
+}
+
+#habil {
+    padding-top: 60px;
+    margin-top: 60px;
+    
+}
+#habilidades ul {
+    list-style: none;
+    padding-left: 0;
+    font-style: italic;
+    
+}
+
+
+#contato {
+    padding-top: 60px;
+    margin-top: 60px;
+    width: 100%;
+    border-top: 1px solid rgb(11, 9, 9);
+
+}
+    
+#contato ul {
+list-style: none;
+padding-left: 0;
+
+}
+
+
+.icone {
+    fill:rgb(82, 82, 79);
+    stroke:rgb(168, 142, 142);
+    stroke-width: 5px;
+    width: 75px;
+    height: 75px;
+}
+
+footer ul {
+    display:grid;
+    justify-content: space-around;
+    list-style-type: none;
+}
