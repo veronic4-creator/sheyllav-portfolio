@@ -1,101 +1,108 @@
-
 * {
-  margin:0;
-  padding:0
+    margin: 5px;
+    padding: 0px;
+    box-sizing:content-box
 }
+
 
 /* CSS vem aqui em baixo*/
 
-header {
+@media screen and (max-width: 768px) {
 
-    color: rgb(230, 230, 59);
-    color:black;
-    text-align: center;
-    padding: 20px;
-    position:static; 
-    width: 250px;
-    font-style: italic;
-    background-image: url("pictures/foto5.jpg");
-}
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
 
-main {
-flex: 1;
-padding: 30px;
-text-align:justify
+    aside,
+    main {
+        width: 100%;
+    }
 
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
 }
 
 body {
-    background-image:url("pictures/foto3.jpg");
-    background-position: center;  /* centraliza */
-    background-repeat: no-repeat; /* evita repetição */
-    background-attachment: fixed; /* efeito fixo ao rolar */
-    min-height: 200vh;
+    background-image: url(pictures/foto1.jpg);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content:center;
     font-style: italic;
-    color: rgb(12, 12, 3); background-color: rgb(20, 20, 20);
-
+    color: rgb(197, 157, 157);
 }
-
 
 body a {
     display: flex;
-   text-transform: uppercase;
-   text-decoration: none;
-   color:rgb(12, 10, 1)
-
+    text-transform: uppercase;
+    text-decoration:none;
+    color: rgb(161, 118, 78)
 }
 
-
-#sobre {
-    padding-top: 60px;
-    margin-top: 60px;
-    ul {
-    list-style: none;
+header {
+    color: rgb(161, 118, 78)
+    text-align: center;
+    padding: 20px;
+    height: 99vh;
+    width: 350px;
+    font-style: italic;
+    margin-right: 100px;
 }
 
+.fotoLateral {
+    width: 150%;
+    height: 60%;
 }
 
-#habil {
-    padding-top: 60px;
-    margin-top: 60px;
+main {
+    padding: 60px;
+    text-align: justify
     
 }
+
+section {
+    margin-block: 50px;
+}
+
+li {
+    list-style-type: none;
+}
+
 #habilidades ul {
-    list-style: none;
     padding-left: 0;
     font-style: italic;
-    
+
 }
 
 
 #contato {
-    padding-top: 60px;
-    margin-top: 60px;
     width: 100%;
-    border-top: 1px solid rgb(11, 9, 9);
-
+    border-top: 1px solid rgb(151, 101, 101);
 }
-    
+
 #contato ul {
-list-style: none;
-padding-left: 0;
+    padding-left: 0;
+    display: flex;
 
 }
-
 
 .icone {
-    fill:rgb(82, 82, 79);
-    stroke:rgb(168, 142, 142);
+    fill: rgb(233, 227, 221);
+    stroke: rgb(231, 127, 127);
     stroke-width: 5px;
     width: 75px;
     height: 75px;
 }
 
-footer ul {
-    display:grid;
-    justify-content: space-around;
-    list-style-type: none;
+footer {
+    margin-top: 40px;
+    text-align: center;
 }
+
