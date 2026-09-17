@@ -1,40 +1,18 @@
 * {
     margin: 5px;
-    padding: 0px;
-    box-sizing:content-box
+    padding: 2px;
+
 }
 
 
 /* CSS vem aqui em baixo*/
 
-@media screen and (max-width: 768px) {
-
-    .container {
-        display: flex;
-        flex-direction: column;
-    }
-
-    aside,
-    main {
-        width: 100%;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    body {
-        overflow-x: hidden;
-    }
-}
-
 body {
     background-image: url(pictures/foto1.jpg);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
+    display: flow-root;
+    flex-direction:column;
+    text-align: center;
     font-style: italic;
     color: rgb(197, 157, 157);
 }
@@ -48,17 +26,10 @@ body a {
 
 header {
     color: rgb(161, 118, 78)
-    text-align: center;
-    padding: 20px;
-    height: 99vh;
-    width: 350px;
+    height: 100vh;
+    width: 1200px;
     font-style: italic;
-    margin-right: 100px;
-}
-
-.fotoLateral {
-    width: 150%;
-    height: 60%;
+    margin-right:100px;
 }
 
 main {
