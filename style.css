@@ -1,79 +1,129 @@
+/* RESET BÁSICO */
 * {
-    margin: 5px;
-    padding: 2px;
-
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
-/* CSS vem aqui em baixo*/
-
+/* ESTILO GLOBAL DO CORPO */
 body {
-    background-image: url(pictures/foto1.jpg);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: flow-root;
-    flex-direction:column;
-    text-align: center;
-    font-style: italic;
-    color: rgb(197, 157, 157);
-}
-
-body a {
-    display: flex;
-    text-transform: uppercase;
-    text-decoration:none;
-    color: rgb(161, 118, 78)
-}
-
-header {
-    color: rgb(161, 118, 78)
-    height: 100vh;
-    width: 1200px;
-    font-style: italic;
-    margin-right:100px;
-}
-
-main {
-    padding: 60px;
-    text-align: justify
+    background-color: #1e1e1e; /* Fundo escuro conforme a imagem */
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 15px;
     
-}
-
-section {
-    margin-block: 50px;
-}
-
-li {
-    list-style-type: none;
-}
-
-#habilidades ul {
-    padding-left: 0;
-    font-style: italic;
-
-}
-
-
-#contato {
-    width: 100%;
-    border-top: 1px solid rgb(151, 101, 101);
-}
-
-#contato ul {
-    padding-left: 0;
+    /* Centraliza o container principal na página */
     display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 
+/* CONTAINER CENTRAL (Alinha topo e corpo no mesmo eixo) */
+.portfolio-container {
+    width: 100%;
+    max-width: 800px; /* Limite de largura para telas grandes */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza todos os elementos filhos */
+    gap: 25px;
+}
+
+/* HEADER E SEÇÕES */
+.secao-header, 
+.conteudo-principal, 
+.bloco-secao {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinha o conteúdo interno ao centro */
+    text-align: center;   /* Centraliza os textos */
+}
+
+/* FOTO DE PERFIL */
+
+.foto-perfil {
+  width: 150px;
+  height: 150px; /* A largura e a altura DEVEM ser iguais */
+  border-radius: 60%; /* Transforma o quadrado em um círculo perfeito */
+  object-fit:none /* Evita que a foto fique esticada ou achatada */
+}
+
+/* ÍCONES SEPARADORES */
+    
+.icone-separador {
+    width: 80px;
+    margin: 40px 0;
+    gap: 15%;
+    width: 45px;
+    height: 45px;
+    padding: 8px;
+    background-color: #ff00c8; /* Sua cor preferida */
+    border-radius: 70%;   /* Transforma o fundo num círculo colorido */
+    transition: transform 0.4s ease;
+}
+
+/* ESTILO DOS TEXTOS */
+p, .texto-apresentacao, .texto-sobre {
+    font-size: 0.95rem;
+    color: #cccccc;
+    max-width: 700px;
+}
+
+h2, h3 {
+    color: #df04b0;
+    margin: 15px 0 10px;
+}
+
+/* LISTAS DE INFORMAÇÕES (Formação, Habilidades, Projetos) */
+.lista-info {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.lista-info li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+/* REDES SOCIAIS (CONTATO) */
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    margin-top: 10px;
 }
 
 .icone {
-    fill: rgb(233, 227, 221);
-    stroke: rgb(231, 127, 127);
-    stroke-width: 5px;
-    width: 75px;
-    height: 75px;
+    width: 35px;
+    height: 35px;
+    fill: #ff00c8; /* Cor rosa/destaque dos ícones */
+    transition: transform 0.2s ease;
 }
 
+.icone:hover {
+    transform: scale(1.15); /* Efeito de crescer ao passar o mouse */
+}
+
+/* RODAPÉ */
 footer {
-    margin-top: 40px;
     text-align: center;
+    font-size: 0.8rem;
+    color: #888888;
+    margin-top: 20px;
+    padding-bottom: 10px;
 }
 
+/* AJUSTES PARA TELAS MAIORES (Tablets/Desktops) */
+@media (min-width: 768px) {
+    body {
+        padding: 40px 20px;
+    }
+
+    p, .texto-apresentacao, .texto-sobre {
+        font-size: 1.05rem;
+    }
+}
