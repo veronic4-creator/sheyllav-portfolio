@@ -6,6 +6,7 @@
 }
 
 /* ESTILO GLOBAL DO CORPO */
+
 body {
     background-color: #f5f4f4; /* Fundo escuro conforme a imagem */
     color: #0f0f0f;
@@ -14,7 +15,7 @@ body {
     padding: 15px;
     
     /* Centraliza o container principal na página */
-    display: flex;
+    display:flexbox;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -69,6 +70,12 @@ p, .texto-apresentacao, .texto-sobre {
     font-size: 0.95rem;
     color: #0c0c0c;
     max-width: 700px;
+
+}
+
+body.modo-escuro p,
+body.modo-escuro li {
+    color: #ffffff; /* Garante que todos os parágrafos e listas fiquem brancos */
 }
 
 h2, h3 {
@@ -77,12 +84,16 @@ h2, h3 {
 }
 
 /* Quando o body receber a classe .modo-escuro */
-
 body.modo-escuro {
-    background-color: #121212;
+    background-color: #121212; 
     color: #f6f6f6;
+   
+}  
+/* Opcional: Ajusta a cor dos ícones SVG para ficarem visíveis no fundo escuro */
+body.modo-escuro svg {
+  fill: #ffffff;
+}
 
-}   
 /* LISTAS DE INFORMAÇÕES (Formação, Habilidades, Projetos) */
 .lista-info {
     list-style-type: none;
@@ -117,7 +128,7 @@ body.modo-escuro {
 
 /* RODAPÉ */
 footer {
-    text-align: center;
+    text-align:end;
     font-size: 0.8rem;
     color: #888888;
     margin-top: 20px;

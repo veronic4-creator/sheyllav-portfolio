@@ -1,31 +1,9 @@
-let icon_modo_escuro = document.getElementById("escuro");
+// 1. Seleciona o ícone pelo ID ou Classe
+const btnTema = document.getElementById('btn-tema');
 
-icon_modo_escuro.onclick = troca_classe
-let modo_escuro_ativado = false;
-
-botao_simples.onclick = troca_classe
-
-function () {
-    if 
-    meu_titulo.class_list.remove("modo_claro");
-    meu_titulo.class_list.add("modo_escuro");
-}
-
-//PROCESSAMENTO
-
- if(modo_escuro_ativado == true) {
-    meu_titulo.class_list.remove("modo_escuro");
-    meu_titulo.class_list.add("modo_claro");
-
-    modo_escuro_ativado = false;
-}
-
-else {
-    meu_titulo_class_list.remove("modo_claro");
-    meu_titulo_class_list.add("modo_escuro");
-
-    modo_escuro_ativado = true;
-}
-   
-
+// 2. Adiciona um evento de clique ao ícone
+btnTema.addEventListener('click', () => {
+  // O 'toggle' adiciona a classe se ela não existir, e remove se já existir
+  document.body.classList.toggle('modo-escuro');
+});
 
