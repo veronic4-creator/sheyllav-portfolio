@@ -7,8 +7,8 @@
 
 /* ESTILO GLOBAL DO CORPO */
 body {
-    background-color: #1e1e1e; /* Fundo escuro conforme a imagem */
-    color: #e0e0e0;
+    background-color: #f5f4f4; /* Fundo escuro conforme a imagem */
+    color: #0f0f0f;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     padding: 15px;
@@ -67,7 +67,7 @@ body {
 /* ESTILO DOS TEXTOS */
 p, .texto-apresentacao, .texto-sobre {
     font-size: 0.95rem;
-    color: #cccccc;
+    color: #0c0c0c;
     max-width: 700px;
 }
 
@@ -76,6 +76,13 @@ h2, h3 {
     margin: 15px 0 10px;
 }
 
+/* Quando o body receber a classe .modo-escuro */
+
+body.modo-escuro {
+    background-color: #121212;
+    color: #f6f6f6;
+
+}   
 /* LISTAS DE INFORMAÇÕES (Formação, Habilidades, Projetos) */
 .lista-info {
     list-style-type: none;
