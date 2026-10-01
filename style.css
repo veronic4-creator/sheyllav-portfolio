@@ -6,28 +6,27 @@
 }
 
 /* ESTILO GLOBAL DO CORPO */
-
 body {
-    background-color: #f5f4f4; /* Fundo escuro conforme a imagem */
+    position: relative; /* Ponto de referência para o ícone absoluto */
+    background-color: #f5f4f4;
     color: #0f0f0f;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     padding: 15px;
-    
-    /* Centraliza o container principal na página */
-    display:flexbox;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
 
-/* CONTAINER CENTRAL (Alinha topo e corpo no mesmo eixo) */
+/* CONTAINER CENTRAL */
 .portfolio-container {
     width: 100%;
-    max-width: 800px; /* Limite de largura para telas grandes */
+    max-width: 800px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza todos os elementos filhos */
+    align-items: center;
     gap: 25px;
 }
 
@@ -38,63 +37,43 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Alinha o conteúdo interno ao centro */
-    text-align: center;   /* Centraliza os textos */
+    align-items: center;
+    text-align: center;
 }
 
 /* FOTO DE PERFIL */
-
 .foto-perfil {
-  width: 150px;
-  height: 150px; /* A largura e a altura DEVEM ser iguais */
-  border-radius: 60%; /* Transforma o quadrado em um círculo perfeito */
-  object-fit:none /* Evita que a foto fique esticada ou achatada */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Círculo perfeito */
+    object-fit: cover;  /* Encaixa a imagem perfeitamente sem achatar */
 }
 
 /* ÍCONES SEPARADORES */
-    
 .icone-separador {
-    width: 80px;
-    margin: 40px 0;
-    gap: 15%;
     width: 45px;
     height: 45px;
+    margin: 40px 0;
     padding: 8px;
-    background-color: #ff00c8; /* Sua cor preferida */
-    border-radius: 70%;   /* Transforma o fundo num círculo colorido */
+    background-color: #ff00c8;
+    border-radius: 50%;
     transition: transform 0.4s ease;
 }
 
-/* ESTILO DOS TEXTOS */
+/* ESTILO DOS TEXTOS PADRÃO */
 p, .texto-apresentacao, .texto-sobre {
     font-size: 0.95rem;
     color: #0c0c0c;
     max-width: 700px;
-
 }
 
-body.modo-escuro p,
-body.modo-escuro li {
-    color: #ffffff; /* Garante que todos os parágrafos e listas fiquem brancos */
-}
-
+/* TÍTULOS (H2, H3) */ 
 h2, h3 {
     color: #df04b0;
     margin: 15px 0 10px;
 }
 
-/* Quando o body receber a classe .modo-escuro */
-body.modo-escuro {
-    background-color: #121212; 
-    color: #f6f6f6;
-   
-}  
-/* Opcional: Ajusta a cor dos ícones SVG para ficarem visíveis no fundo escuro */
-body.modo-escuro svg {
-  fill: #ffffff;
-}
-
-/* LISTAS DE INFORMAÇÕES (Formação, Habilidades, Projetos) */
+/* LISTAS DE INFORMAÇÕES */
 .lista-info {
     list-style-type: none;
     padding: 0;
@@ -118,24 +97,72 @@ body.modo-escuro svg {
 .icone {
     width: 35px;
     height: 35px;
-    fill: #ff00c8; /* Cor rosa/destaque dos ícones */
+    fill: #ff00c8;
     transition: transform 0.2s ease;
 }
 
 .icone:hover {
-    transform: scale(1.15); /* Efeito de crescer ao passar o mouse */
+    transform: scale(1.15);
 }
 
 /* RODAPÉ */
 footer {
-    text-align:end;
+    text-align: center;
     font-size: 0.8rem;
     color: #888888;
     margin-top: 20px;
     padding-bottom: 10px;
 }
 
-/* AJUSTES PARA TELAS MAIORES (Tablets/Desktops) */
+/* =================================================== */
+/* --- POSICIONAMENTO DO ÍCONE --- */
+/* =================================================== */
+
+#icone_alternar_tema {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 9999; /* Garante que fica por cima de tudo */
+}
+
+/* Cor do ícone no modo claro */
+body.tema_claro #icone_alternar_tema {
+    fill: #222222;
+}
+
+/* =================================================== */
+/* --- ESTILOS DO TEMA ESCURO --- */
+/* =================================================== */
+
+/* Fundo escuro e cor de texto geral */
+body.tema_escuro {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Cor do ícone de alternar tema no modo escuro */
+body.tema_escuro #icone_alternar_tema {
+    fill: #fefdf9;
+}
+
+/* Força a cor clara em todos os textos no modo escuro */
+body.tema_escuro p,
+body.tema_escuro .texto-apresentacao,
+body.tema_escuro .texto-sobre,
+body.tema_escuro li,
+body.tema_escuro strong {
+    color: #f5eef1;
+}
+
+/* Preenchimento dos ícones das redes sociais no modo escuro */
+body.tema_escuro .icone {
+    fill: #ff00c8; 
+}
+
+/* RESPONSIVIDADE (Tablets e Desktops) */
 @media (min-width: 768px) {
     body {
         padding: 40px 20px;
