@@ -46,7 +46,7 @@ body {
     width: 150px;
     height: 150px;
     border-radius: 50%; /* Círculo perfeito */
-    object-fit: cover;  /* Encaixa a imagem perfeitamente sem achatar */
+    object-fit: cover;  /* Encaixa a imagem sem achatar */
 }
 
 /* ÍCONES SEPARADORES */
@@ -119,13 +119,13 @@ footer {
 /* =================================================== */
 
 #icone_alternar_tema {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 30px;
+    position:absolute;
+    top: 30px;
+    right: 75px;
+    width: 60px;
     height: 30px;
     cursor: pointer;
-    z-index: 9999; /* Garante que fica por cima de tudo */
+    scale: 1.5;
 }
 
 /* Cor do ícone no modo claro */
