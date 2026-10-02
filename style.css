@@ -11,43 +11,41 @@ body {
     background-color: #f5f4f4;
     color: #0f0f0f;
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    line-height: 1.5;
+    padding: 10px;
+    display:grid;
+    flex-direction:column;
+    justify-content:center;
     align-items: center;
-    min-height: 100vh;
-}
-
-/* CONTAINER CENTRAL */
-.portfolio-container {
-    width: 100%;
-    max-width: 800px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
+    min-height: 70vh;
 }
 
 /* HEADER E SEÇÕES */
-.secao-header, 
-.conteudo-principal, 
-.bloco-secao {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+.secao-header {
+  max-width: 800px; /* Aumenta a largura para caber a foto e o texto */
+  display: flex; /* Alinha os elementos lado a lado */
+  flex-direction: row; /* Coloca lado a lado (horizontal) */
+  align-items: center; /* Alinha a foto e o texto verticalmente ao centro */
+  gap: 20px; /* Cria um espaço entre a foto e o texto */
+  text-align:justify
 }
+.secao-header {
+   .secao-header {
+    /* Adiciona uma borda na parte de baixo */
+    border-bottom: 2px solid #2a2a2a; /* Cinza escuro discreto */
+   }
+}
+
+
 
 /* FOTO DE PERFIL */
 .foto-perfil {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%; /* Círculo perfeito */
     object-fit: cover;  /* Encaixa a imagem sem achatar */
 }
+
 
 /* ÍCONES SEPARADORES */
 .icone-separador {
@@ -61,10 +59,13 @@ body {
 }
 
 /* ESTILO DOS TEXTOS PADRÃO */
-p, .texto-apresentacao, .texto-sobre {
-    font-size: 0.95rem;
+ .texto-sobre {
+    height:100px;
+    font-size:small;
     color: #0c0c0c;
-    max-width: 700px;
+    max-width: 400px;
+    text-align:justify;
+    align-self: center;
 }
 
 /* TÍTULOS (H2, H3) */ 
@@ -75,8 +76,8 @@ h2, h3 {
 
 /* LISTAS DE INFORMAÇÕES */
 .lista-info {
-    list-style-type: none;
-    padding: 0;
+    list-style-type:none;
+    padding: 10px;
     margin-bottom: 15px;
 }
 
@@ -123,9 +124,9 @@ footer {
     top: 30px;
     right: 75px;
     width: 60px;
-    height: 30px;
+    height: 60px;
     cursor: pointer;
-    scale: 1.5;
+    scale: 1.8;
 }
 
 /* Cor do ícone no modo claro */
